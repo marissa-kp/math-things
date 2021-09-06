@@ -1,0 +1,54 @@
+import numpy as np
+from scipy import stats
+import matplotlib 
+
+# generate array of 100 random numbers between 0 and 1
+x = np.random.rand(100)
+
+# use np to generate mean
+mean = np.mean(x)
+print("mean is", mean)
+
+# use stats to generate mode
+mode = stats.mode(x)     
+print("mode is", mode)
+
+# use numpy to calculate standard deviation
+std = np.std(x)
+print("stdev is", std)
+
+# calculate mean absolute standard deviation
+
+
+
+# calculate median absolute stadard deviation
+medad = stats.median_absolute_deviation(x)
+print("median average deviation is", medad)
+
+# calculate variance using numpy
+vari = np.var(x)
+print("variance is", vari)
+
+# creating set of y
+y = np.random.rand(100)
+
+# calculate correlation using numpy
+r = stats.pearsonr(x, x)
+r2  = stats.pearsonr(y, x)
+
+print("r: ", r)
+print("r2: ", r2)
+
+# calculate spearman r correlation using scipy
+spr = stats.spearmanr(x, x)
+spr2 = stats.spearmanr(x, y)
+
+print("spearman r: ", spr)
+print("spearman r2: ", spr2)
+
+# calculate logarithm using numpy
+log = np.log(x)
+print("log of x: ", log)
+
+# generate a scatter plot using matplotlib
+matplotlib.pyplot.scatter(x, y)
